@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="projects.css">
+    <!-- Work Sans -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
+    <!-- Rajdhani (Cyberpunk 2077 UI Font) -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
+    <!-- Source Code Pro -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900'>
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- Navigation bar -->
+    <script src="nav.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav-bar></nav-bar>
+
+    <!-- Section: Header -->
+    <div class="project-page-header">
+      <div class="project-path">/Projects/Sorting_Algo_Visualizer</div>
+      <div class="img-container">
+        <img src="Assets/scale/sorting-algo-visualizer.jpeg" class="header-photo">
+      </div>
+      <div class="project-page-section">
+        <h1>Sorting Algo Visualizer<h1>
+        <p>
+          This project is a console-based application in Java that aims to visually 
+          represent the execution of various sorting algorithms on different sets of 
+          integer arrays. The sorting algorithms included are Merge Sort, Bubble Sort, 
+          Heap Sort, Selection Sort, and Insertion Sort.<br><br>
+        </p>
+      </div>
+    </div>
+    <!-- Section: Header -->
+          
+    <div class=project-page-section>
+      <h2>Key Features</h2>
+      <p>
+        1. User Interaction through Console<br><br>
+        The user can choose a sorting algorithm to visualize. The user can generate a 
+        random array, make a custom array, or use a previously generated array to sort.
+        Upon choosing an algorithm, the system will display the array’s sorting process 
+        and state how many iterations it took for the array to be successfully sorted.
+        The application loops until the user decides to exit.<br><br>
+        2. Sorting Algorithms<br><br>
+        The system includes classes for each of the following sorting algorithims:<br><br>
+        Merge Sort<br><br>
+        Bubble Sort<br><br>
+        Heap Sort<br><br>
+        Selection Sort<br><br>
+        Insertion Sort<br><br>
+        3. Visualization<br><br>
+        The VisualizerAlgo class is responsible for the visualization of the sorting process.
+        It represents each number in the array as a column of ‘*’ characters, the height of which 
+        corresponds to the number’s value. The visualization uses a grid of strings, where each number 
+        is translated into a column of ‘*’ characters with spaces above, depending on the number’s value.
+        There’s a counter (iterationCtr) to keep track of the number of iterations, which is displayed 
+        after sorting.<br><br>
+        4. Array Generation and Handling<br><br>
+        The user can generate a random array with values between 0 to 100, and a length ranging from 50 to 100.
+        The user can also input their custom array values. Arrays can be copied, displayed, and used for sorting.<br><br>
+        5. Error Handling<br><br>
+        The system checks for invalid inputs and throws exceptions if needed (e.g. when finding the largest 
+        number in an empty or null array).<br><be>
+        Conclusion<br><br> 
+        This Sorting Algorithm Visualizer is a comprehensive tool for users to understand the inner workings 
+        of popular sorting algorithms. By providing a visual aid in the form of a console grid, users can see 
+        the step-by-step changes in the array as it gets sorted, enhancing the understanding and appreciation 
+        of algorithm complexities.
+      </p>
+    </div>
+  </body>
+</html>

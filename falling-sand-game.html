@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="projects.css">
+    <!-- Work Sans -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
+    <!-- Rajdhani (Cyberpunk 2077 UI Font) -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
+    <!-- Source Code Pro -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900'>
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- Navigation bar -->
+    <script src="nav.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav-bar></nav-bar>
+
+    <!-- Section: Header -->
+    <div class="project-page-header">
+      <div class="project-path">/Projects/Falling_Sand_Game</div>
+      <div class="img-container">
+        <img src="Assets/scale/falling-sand-game.jpeg" class="header-photo">
+      </div>
+      <div class="project-page-section">
+        <h1>Falling Sand Game<h1>
+        <p>
+          This Falling Sand Game is a Java-based console application designed to 
+          visually simulate the behavior of various particles, such as sand, water, 
+          and ice. The application provides a graphical representation of these particles 
+          and their interactions in a grid-based environment.<br><br>
+        </p>
+      </div>
+    </div>
+    <!-- Section: Header -->
+          
+    <div class=project-page-section>
+      <h2>Key Features</h2>
+      <p>
+        1. User Interaction through GUI<br><br>
+        The application utilizes Java’s AWT and Swing libraries to create an 
+        interactive graphical interface. Users can select different particle 
+        types and place them on a grid. The application displays the movement 
+        and interactions of these particles in real time.<br><br>
+        2. Particle Simulation<br><br>
+        The system supports various particle types, including:<br><br>
+        Empty (Eraser)<br><br>
+        Metal<br><br>
+        Water<br><br>
+        Sand<br><br>
+        Ice<br><br>
+        Glass<br><br>
+        Each particle type has its unique behavior and interactions with other particles. 
+        For example, sand particles fall downwards until they hit another particle, and 
+        ice particles can melt into water over time.<br><br>
+        3. Visualization<br><br>
+        The SandDisplay class is responsible for the visualization of the grid and particles.
+        Each cell in the grid can contain a particle, and the color of the cell represents 
+        the type of particle it contains. The application updates and repaints the display in 
+        real time to show particle movements and interactions.<br><br>
+        4. User Controls<br><br>
+        Users can interact with the application using mouse clicks to place particles on the grid.
+        A slider allows users to adjust the simulation speed. Buttons enable users to select the 
+        type of particle they want to place.<br><br>
+        5. Randomized Particle Movement<br><br>
+        The step() method in the SandLab class is responsible for simulating the movement and 
+        interactions of particles. Particle movements are randomized to create a dynamic and 
+        unpredictable simulation.<br><br>
+        6. Error Handling and Robustness<br><br>
+        The system includes checks to ensure particles do not move outside the grid boundaries.
+        Interactions between different particle types, such as sand and water, are handled to 
+        ensure realistic behavior.<br><br>
+        Conclusion<br><br>
+        This Falling Sand Game offers a captivating visual representation of particle behavior 
+        and interactions. By allowing users to interactively place and observe particles, the 
+        application provides insights into the dynamics of particle systems. Whether used for 
+        educational purposes or sheer entertainment, this application serves as a testament to 
+        the power of simulation and visualization in understanding complex systems.<br><br>
+      </p>
+    </div>
+  </body>
+</html>
