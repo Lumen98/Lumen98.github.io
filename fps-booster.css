@@ -1,60 +1,60 @@
 /* 
-  GLOBAL / BASE STYLES
------------------------------------------- */
+  Keep whatever you had for the NAV or specific links 
+  so that "About," "Kareem Nabulsi," and "Projects" remain 
+  in the same font as your original code.
+*/
+
+/* GLOBAL STYLES (for the rest of the page) */
 body {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Rajdhani", sans-serif; /* Only apply to content, not overriding nav */
   margin: 0;
   padding: 0;
   color: #333;
 }
 
-a {
-  font-weight: bold;
-  text-decoration: none; /* if you want underlines, remove this */
-}
-
-/* 
-  THREE IMAGES AT THE TOP
------------------------------------------- */
+/* THREE IMAGES AT TOP */
 .three-images-container {
-  /* Display 3 images side by side on larger screens */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* center them horizontally */
-  gap: 20px;               /* space between images */
+  gap: 20px;
   width: 80%;
-  margin: 48px auto 24px auto; /* top, right/left auto, bottom */
+  margin: 48px auto 24px auto;
+  justify-content: center;
+  /* 
+    Add some left padding so the first image isn't right at the edge.
+    The container is still centered as a whole. 
+  */
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .top-image {
-  width: 240px;  /* fix each image width so they match in size */
+  width: 240px;
   height: auto;
-  object-fit: cover; /* helps keep them consistent if aspect ratios differ */
+  object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* optional shadow */
 }
 
-/* 
-  CONTENT SECTIONS (where the path, heading, paragraph, etc. go)
------------------------------------------- */
+/* MAIN PAGE SECTION CONTAINER */
 .project-page-section {
   width: 80%;
-  margin: 24px auto;  /* centers the section */
+  margin: 24px auto;
 }
 
-/* Example path style */
+/* PROJECT PATH (align left with h1) */
 .project-path {
   font-weight: 500;
   font-size: 18px;
-  margin-bottom: 16px;
-  opacity: 0.8;  /* slightly less intense, optional */
+  margin: 0 0 16px 0; /* remove side auto margins so it left-aligns with h1 */
+  opacity: 0.8;       /* optional: slightly lighter text */
 }
 
-/* Headings */
+/* HEADINGS */
 .project-page-section h1 {
   font-weight: 700;
   font-size: 64px;
-  margin-top: 0; /* remove extra space if needed */
+  margin: 0 0 24px 0;
 }
 
 .project-page-section h2 {
@@ -63,11 +63,11 @@ a {
   margin-bottom: 16px;
 }
 
-/* Paragraphs */
+/* PARAGRAPHS */
 .project-page-section p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
-
-/* If you have other headings (h3, etc.) or lists, copy your existing rules. */
