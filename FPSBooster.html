@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="projects.css" />
+
+  <!-- Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900"
+  />
+
+  <!-- jQuery -->
+  <script src="jquery-3.6.0.min.js"></script>
+
+  <!-- Navigation bar script -->
+  <script src="nav.js"></script>
+
+  <title>FPS_Booster Project</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav-bar></nav-bar>
+
+  <!-- Header Section -->
+  <header class="project-page-header">
+    <div class="project-path">/Projects/FPS_Booster</div>
+    <div class="img-container">
+      <img
+        src="Assets/scale/FPS_Booster.jpeg"
+        class="header-photo"
+        alt="FPS_Booster header image"
+      />
+    </div>
+    <div class="project-page-section">
+      <h1>FPS_Booster</h1>
+      <p>
+        I wanted to get experience with networking using a client-server-based
+        architecture. I ended up choosing a calculator for its simplicity
+        and flexibility given I can add any function that comes to
+        mind. As such, I created a calculator that starts a server and communicates
+        with the client.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="project-page-section">
+    <h2>Key Features</h2>
+    <p><strong>1. User Interaction through GUI</strong></p>
+    <p>
+      The application, built using JavaFX, offers a user-friendly interface 
+      with text fields for input and labels for displaying results. Users
+      can perform basic arithmetic operations using dedicated buttons. A
+      history feature displays previous calculations, as well as the maximum 
+      and minimum results obtained. A timer showcases the application’s runtime.
+    </p>
+
+    <p><strong>2. Calculator Functionalities</strong></p>
+    <p>
+      The <code>Calculator</code> class handles arithmetic operations such as addition, 
+      subtraction, multiplication, and division. A <code>LinkedList</code> maintains 
+      a history of calculations, allowing users to revisit past operations. 
+      The application also tracks the maximum and minimum answers from the calculations.
+    </p>
+
+    <p><strong>3. Visualization and GUI Handling</strong></p>
+    <p>
+      The <code>Client</code> class manages the GUI creation and event handling.
+      It contains methods to set up the button grid and handle button logic.
+      The <code>TimerThread</code> class updates a label to display the application’s runtime.
+    </p>
+
+    <p><strong>4. Networking and Logging</strong></p>
+    <p>
+      The <code>Network</code> class manages network communication, connecting 
+      to a server, sending log requests, and receiving log responses using sockets. 
+      The <code>Server</code> class waits for client connections, processes incoming log requests, 
+      and sends back log responses. It operates on port <code>4444</code> as an example. 
+      <code>LogRequest</code> and <code>LogResponse</code> classes facilitate logging, 
+      utilizing the Jackson library for JSON serialization and deserialization.
+    </p>
+
+    <p><strong>5. Data Handling and Storage</strong></p>
+    <p>
+      The <code>IOHelper</code> class offers methods to read from and write to an external file, 
+      <code>“output.txt”</code>, ensuring a persistent history of calculations.
+    </p>
+
+    <p><strong>6. Error Handling and Robustness</strong></p>
+    <p>
+      The system is designed to handle potential errors and exceptions, ensuring smooth user 
+      experience and data integrity.
+    </p>
+  </main>
+</body>
+</html>
