@@ -1,1 +1,128 @@
+/* 
+  --------------------------------------------------------
+  GLOBAL STYLES & TEXT
+  --------------------------------------------------------
+*/
+body {
+  font-family: "Rajdhani", sans-serif; /* Change if desired */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
+a {
+  font-weight: bold;
+  text-decoration: none; /* or remove if you want underlines */
+}
+
+/* 
+  --------------------------------------------------------
+  HERO / HEADER SECTION
+  --------------------------------------------------------
+*/
+.project-page-header {
+  /* Display as flex to get image + text side by side */
+  display: flex;
+  flex-wrap: wrap;             /* stacks on small screens */
+  align-items: center;         /* vertically center items in the row */
+  justify-content: center;
+  width: 80%;
+  margin: 48px auto 24px auto; /* top/bottom + left/right auto center */
+}
+
+.img-container {
+  /* This acts as one "column" */
+  flex: 1 1 300px;       /* can grow/shrink, minimum 300px wide */
+  max-width: 400px;      /* stop the image from getting too huge */
+  margin: 16px;
+  text-align: center;
+}
+
+.header-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* subtle shadow */
+}
+
+.project-header-text {
+  /* This is the other "column" */
+  flex: 1 1 300px;
+  margin: 16px;
+}
+
+/* Dim paragraphs specifically inside the hero section (optional) */
+.project-page-header p {
+  opacity: 0.6;
+}
+
+/* 
+  --------------------------------------------------------
+  PROJECT PATH
+  --------------------------------------------------------
+*/
+.project-path {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 16px;
+  /* If you need it to span the full width above everything, 
+     you can set width: 100%; but typically it's fine as-is. */
+}
+
+/* 
+  --------------------------------------------------------
+  MAIN CONTENT SECTION
+  --------------------------------------------------------
+*/
+.project-page-section {
+  width: 80%;
+  margin: 24px auto 0 auto;
+}
+
+/* Headings */
+.project-page-section h1 {
+  font-weight: 700;
+  font-size: 64px;
+  margin-top: 0; /* remove extra space if needed */
+}
+
+.project-page-section h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.project-page-section h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Paragraphs */
+.project-page-section p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5; /* slightly more readable */
+}
+
+/* 
+  --------------------------------------------------------
+  LISTS
+  --------------------------------------------------------
+*/
+.components-list {
+  list-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+/* 
+  --------------------------------------------------------
+  OPTIONAL: Additional project images or videos 
+  --------------------------------------------------------
+*/
+.project-photo, 
+.project-video {
+  width: 100%;
+  margin: 24px 0;
+}
