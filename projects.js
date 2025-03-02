@@ -3,6 +3,10 @@ const onMouseMove = (e) =>{
     left: (e.pageX + 4),
     top: (e.pageY + 4)
   });
+  $("#fps-booster-details").css({
+    left: (e.pageX + 4),
+    top: (e.pageY + 4)
+  });
   $("#calculator-details").css({
     left: (e.pageX + 4),
     top: (e.pageY + 4)
@@ -27,6 +31,9 @@ function hover(element) {
   if(element.id == "personal-site") {
     $("#personal-site-details").css('display', 'grid');
   }
+  if(element.id == "fps-booster") {
+    $("#fps-booster-details").css('display', 'grid');
+  }
   if(element.id == "calculator") {
     $("#calculator-details").css('display', 'grid');
   }
@@ -44,6 +51,7 @@ function hover(element) {
 function unhover(element) {
   element.setAttribute('src', 'Assets/folder_icon_default.svg');
   $("#personal-site-details").css('display', 'none');
+  $("#fps-booster-details").css('display', 'none');
   $("#calculator-details").css('display', 'none');
   $("#sorting-algo-visualizer-details").css('display', 'none');
   $("#falling-sand-game-details").css('display', 'none');
