@@ -42,14 +42,15 @@
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
-      max-width: 1000px;
-      margin: 48px auto;
+      width: 90%;
+      margin: 48px auto 48px auto;
       justify-content: center;
+      padding-left: 20px;
       box-sizing: border-box;
     }
 
     .top-image {
-      width: 480px;
+      width: 480px; /* BIGGER images */
       height: auto;
       object-fit: cover;
       border-radius: 6px;
@@ -85,14 +86,10 @@
       margin-bottom: 16px;
     }
 
-    /* Mobile responsiveness */
+    /* Make images scale nicely on smaller screens */
     @media (max-width: 768px) {
       .top-image {
         width: 90%;
-      }
-
-      .three-images-container {
-        gap: 16px;
       }
     }
   </style>
