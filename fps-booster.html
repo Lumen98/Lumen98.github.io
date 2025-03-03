@@ -78,7 +78,6 @@
       margin-bottom: 16px;
     }
 
-    /* Regular paragraphs (unchanged) */
     .project-page-section p {
       font-weight: 500;
       font-size: 16px;
@@ -87,15 +86,18 @@
       margin-bottom: 16px;
     }
 
-    /* Increase the entire Key Features text significantly */
-    .key-features-text {
-      font-size: 32px; /* 100% larger */
+    /* Make Key Features section much larger */
+    .key-features-section {
+      font-size: 32px;
       line-height: 1.8;
       font-weight: 500;
     }
 
-    /* Feature descriptions scale up with the rest */
-    .feature-description {
+    .key-features-section strong {
+      font-weight: 700;
+    }
+
+    .key-features-section .feature-description {
       display: block;
       margin-top: 4px;
     }
@@ -137,9 +139,9 @@
   </div>
 
   <!-- Key Features Section -->
-  <div class="project-page-section">
+  <div class="project-page-section key-features-section">
     <h2>Key Features</h2>
-    <p class="key-features-text">
+    <p>
       1. <strong>Modular GUI Architecture</strong><br>
       <span class="feature-description">
         Designed and implemented a scalable, multi-tabbed GUI using PyQt5, separating Basic, Advanced, 
