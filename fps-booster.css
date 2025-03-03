@@ -1,9 +1,3 @@
-/* 
-  Keep whatever you had for the NAV or specific links 
-  so that "About," "Kareem Nabulsi," and "Projects" remain 
-  in the same font as your original code.
-*/
-
 /* GLOBAL STYLES */
 body {
   font-family: "Rajdhani", sans-serif;
@@ -40,7 +34,7 @@ body {
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid black; /* Thin black border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Soft shadow */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
 }
 
 /* MAIN PAGE SECTION CONTAINER */
