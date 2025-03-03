@@ -26,20 +26,10 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-/* MAIN PAGE SECTION CONTAINER */
-.project-page-section {
+/* TITLE WRAPPER for alignment */
+.title-wrapper {
   width: 80%;
-  margin: 24px auto;
-  padding: 0; /* Remove padding to avoid shifting */
-  box-sizing: border-box;
-}
-
-/* FORCE ALIGN project-path and h1 */
-.project-page-section .project-path,
-.project-page-section h1 {
-  display: block;
-  margin-left: 0;
-  padding-left: 0;
+  margin: 0 auto 24px auto;
   text-align: left;
 }
 
@@ -47,15 +37,23 @@ body {
 .project-path {
   font-weight: 500;
   font-size: 18px;
-  margin: 0 0 8px 0; /* slight gap between path and h1 */
+  margin: 0 0 8px 0;
   opacity: 0.8;
 }
 
 /* HEADINGS */
-.project-page-section h1 {
+h1 {
   font-weight: 700;
   font-size: 64px;
   margin: 0 0 24px 0;
+}
+
+/* MAIN PAGE SECTION CONTAINER */
+.project-page-section {
+  width: 80%;
+  margin: 24px auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* SUBHEADINGS */
