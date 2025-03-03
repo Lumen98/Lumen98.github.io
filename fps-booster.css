@@ -1,9 +1,3 @@
-/* 
-  Keep whatever you had for the NAV or specific links 
-  so that "About," "Kareem Nabulsi," and "Projects" remain 
-  in the same font as your original code.
-*/
-
 /* GLOBAL STYLES (for the rest of the page) */
 body {
   font-family: "Rajdhani", sans-serif; /* Only apply to content, not overriding nav */
@@ -20,11 +14,7 @@ body {
   width: 80%;
   margin: 48px auto 24px auto;
   justify-content: center;
-  /* 
-    Add some left padding so the first image isn't right at the edge.
-    The container is still centered as a whole. 
-  */
-  padding-left: 20px;
+  padding-left: 20px; /* Optional padding */
   box-sizing: border-box;
 }
 
@@ -40,14 +30,21 @@ body {
 .project-page-section {
   width: 80%;
   margin: 24px auto;
+  padding-left: 20px; /* Ensures consistent left padding */
+}
+
+/* ALIGN project-path and h1 */
+.project-page-section .project-path,
+.project-page-section h1 {
+  margin-left: 0; /* Ensures no offset */
 }
 
 /* PROJECT PATH (align left with h1) */
 .project-path {
   font-weight: 500;
   font-size: 18px;
-  margin: 0 0 16px 0; /* remove side auto margins so it left-aligns with h1 */
-  opacity: 0.8;       /* optional: slightly lighter text */
+  margin: 0 0 16px 0;
+  opacity: 0.8;
 }
 
 /* HEADINGS */
