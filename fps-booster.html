@@ -49,13 +49,28 @@
       box-sizing: border-box;
     }
 
+    /* Shared image styling */
     .top-image {
-      width: 480px; /* BIGGER images */
-      height: auto;
       object-fit: cover;
       border-radius: 6px;
       border: 2px solid black;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Individual sizes */
+    .image-1 {
+      width: 629px;
+      height: 571px;
+    }
+
+    .image-2 {
+      width: 629px;
+      height: 571px;
+    }
+
+    .image-3 {
+      width: 629px;
+      height: 573px;
     }
 
     .project-page-section {
@@ -90,6 +105,7 @@
     @media (max-width: 768px) {
       .top-image {
         width: 90%;
+        height: auto;
       }
     }
   </style>
@@ -105,9 +121,9 @@
 
   <!-- TOP: Three Images -->
   <div class="three-images-container">
-    <img src="Assets/scale/FPS_Booster1.jpeg" alt="Image 1" class="top-image">
-    <img src="Assets/scale/FPS_Booster2.jpeg" alt="Image 2" class="top-image">
-    <img src="Assets/scale/FPS_Booster3.jpeg" alt="Image 3" class="top-image">
+    <img src="Assets/scale/FPS_Booster1.jpeg" alt="Image 1" class="top-image image-1">
+    <img src="Assets/scale/FPS_Booster2.jpeg" alt="Image 2" class="top-image image-2">
+    <img src="Assets/scale/FPS_Booster3.jpeg" alt="Image 3" class="top-image image-3">
   </div>
 
   <!-- Title / Project Info -->
