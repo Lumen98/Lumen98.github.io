@@ -7,28 +7,135 @@
   <!-- Link your existing CSS -->
   <link rel="stylesheet" href="projects.css">
 
-  <!-- Keep your original font imports if they affect the nav -->
-  <!-- Or any additional fonts you want to use for the site -->
+  <!-- Fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
 
-  <!-- Viewport for responsiveness -->
+  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Optional JS if you need it -->
+  <!-- jQuery -->
   <script src="jquery-3.6.0.min.js"></script>
-  <script src="nav.js"></script>
 
-  <!-- Favicon (optional) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
 </head>
 <body>
 
-  <!-- Keep your nav code as is, so its styling remains unchanged -->
-  <nav-bar></nav-bar>
+  <!-- Inserted navigation bar directly from nav.js -->
+  <style>
+    :root {
+      --foreground-color: black;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+    }
+
+    a {
+      color: var(--foreground-color);
+      text-decoration: none;
+    }
+
+    .logo_container {
+      display: inline-block;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    .navbar * {
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    .nav-item {
+      display: inline-grid;
+      font-family: 'Rajdhani';
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    #nav-item-about-text, #nav-item-projects-text {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    #nav-item-about-indicator, #nav-item-projects-indicator {
+      grid-column: 1;
+      grid-row: 1;
+      height: 32px;
+    }
+
+    #nav-item-about-indicator.current, #nav-item-projects-indicator.current {
+      border-bottom: 1px solid var(--foreground-color);
+      animation: glitch 200ms ease-in forwards;
+    }
+
+    @keyframes glitch {
+      0% { width: 0%; }
+      40% { width: 135%; height: 36px; }
+      50% { width: 30%; height: 28px; }
+      70% { width: 70%; height: 32px; }
+      90% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    .spacer {
+      width: 4%;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .logo_small { display: none; }
+      .logo_lrg {
+        font-family: 'Work Sans';
+        font-weight: 800;
+        font-size: 24px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .logo_lrg { display: none; }
+      .logo_small { height: 100%; }
+      .spacer { width: 10%; }
+    }
+  </style>
+
+  <header>
+    <div class="navbar">
+      <a href="about.html" class="nav-item" id="nav-item-about">
+        <div id="nav-item-about-indicator"></div>
+        <div id="nav-item-about-text">ABOUT</div>
+      </a>
+
+      <div class="spacer"></div>
+
+      <a href="index.html" class="logo_container">
+        <img src="Assets/small_logo.svg" class="logo_small" id="logo">
+        <h1 class="logo_lrg">Kareem Nabulsi</h1>
+      </a>
+
+      <div class="spacer"></div>
+
+      <a href="projects.html" class="nav-item" id="nav-item-projects">
+        <div id="nav-item-projects-indicator"></div>
+        <div id="nav-item-projects-text">PROJECTS</div>
+      </a>
+    </div>
+  </header>
 
   <!-- TOP: Three Images -->
   <div class="three-images-container">
-    <!-- Replace with your actual image files -->
     <img src="Assets/scale/FPS_Booster1.jpeg" alt="Image 1" class="top-image">
     <img src="Assets/scale/FPS_Booster2.jpeg" alt="Image 2" class="top-image">
     <img src="Assets/scale/FPS_Booster3.jpeg" alt="Image 3" class="top-image">
@@ -36,7 +143,6 @@
 
   <!-- Intro / Project Info -->
   <div class="project-page-section">
-    <!-- Text that aligns with H1 on the left -->
     <p class="project-path">/Projects/FPS_Booster</p>
     <h1>FPS_Booster</h1>
     <p>
@@ -70,6 +176,27 @@
       The system is designed to handle...
     </p>
   </div>
+
+  <!-- Optional: keep the JS logic if you'd like the active-page highlighting -->
+  <script>
+    $(document).ready(function(){
+      let root = document.documentElement;
+
+      $('#nav-item-about-indicator').each(function() {
+        if ((window.location.pathname.indexOf($('#nav-item-about').attr('href'))) > -1) {
+            $(this).toggleClass('current');
+            $('#logo').attr("src", "Assets/small_logo_dark.png");
+            root.style.setProperty("--foreground-color", "#FFFFFF");
+        }
+      });
+
+      $('#nav-item-projects-indicator').each(function() {
+        if ((window.location.pathname.indexOf($('#nav-item-projects').attr('href'))) > -1) {
+            $(this).toggleClass('current');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
