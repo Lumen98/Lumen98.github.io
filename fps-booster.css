@@ -26,10 +26,18 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-/* TITLE WRAPPER for alignment */
-.title-wrapper {
+/* MAIN PAGE SECTION CONTAINER */
+.project-page-section {
   width: 80%;
-  margin: 0 auto 24px auto;
+  margin: 24px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TITLE WRAPPER */
+.title-wrapper {
+  padding: 0;
+  margin-bottom: 24px;
   text-align: left;
 }
 
@@ -46,14 +54,6 @@ h1 {
   font-weight: 700;
   font-size: 64px;
   margin: 0 0 24px 0;
-}
-
-/* MAIN PAGE SECTION CONTAINER */
-.project-page-section {
-  width: 80%;
-  margin: 24px auto;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 /* SUBHEADINGS */
