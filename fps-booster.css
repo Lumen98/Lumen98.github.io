@@ -1,9 +1,25 @@
+/* 
+  Keep whatever you had for the NAV or specific links 
+  so that "About," "Kareem Nabulsi," and "Projects" remain 
+  in the same font as your original code.
+*/
+
 /* GLOBAL STYLES */
 body {
   font-family: "Rajdhani", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
+}
+
+/* PROJECT PATH centered under navbar */
+.page-path {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 24px 0;
+  opacity: 0.8;
 }
 
 /* THREE IMAGES AT TOP */
@@ -32,21 +48,7 @@ body {
   margin: 24px auto;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* TITLE WRAPPER */
-.title-wrapper {
-  padding: 0;
-  margin-bottom: 24px;
   text-align: left;
-}
-
-/* PROJECT PATH */
-.project-path {
-  font-weight: 500;
-  font-size: 18px;
-  margin: 0 0 8px 0;
-  opacity: 0.8;
 }
 
 /* HEADINGS */
