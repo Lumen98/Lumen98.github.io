@@ -1,6 +1,6 @@
-/* GLOBAL STYLES (for the rest of the page) */
+/* GLOBAL STYLES */
 body {
-  font-family: "Rajdhani", sans-serif; /* Only apply to content, not overriding nav */
+  font-family: "Rajdhani", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -14,7 +14,7 @@ body {
   width: 80%;
   margin: 48px auto 24px auto;
   justify-content: center;
-  padding-left: 20px; /* Optional padding */
+  padding-left: 20px;
   box-sizing: border-box;
 }
 
@@ -23,27 +23,31 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* optional shadow */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 /* MAIN PAGE SECTION CONTAINER */
 .project-page-section {
   width: 80%;
   margin: 24px auto;
-  padding-left: 20px; /* Ensures consistent left padding */
+  padding: 0; /* Remove padding to avoid shifting */
+  box-sizing: border-box;
 }
 
-/* ALIGN project-path and h1 */
+/* FORCE ALIGN project-path and h1 */
 .project-page-section .project-path,
 .project-page-section h1 {
-  margin-left: 0; /* Ensures no offset */
+  display: block;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: left;
 }
 
-/* PROJECT PATH (align left with h1) */
+/* PROJECT PATH */
 .project-path {
   font-weight: 500;
   font-size: 18px;
-  margin: 0 0 16px 0;
+  margin: 0 0 8px 0; /* slight gap between path and h1 */
   opacity: 0.8;
 }
 
@@ -54,6 +58,7 @@ body {
   margin: 0 0 24px 0;
 }
 
+/* SUBHEADINGS */
 .project-page-section h2 {
   font-weight: 700;
   font-size: 32px;
