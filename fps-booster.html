@@ -86,10 +86,13 @@
       margin-bottom: 16px;
     }
 
-    /* Increase text size for Key Features section */
-    .project-page-section:last-of-type p {
-      font-size: 18px;
-      line-height: 1.75;
+    /* Feature descriptions matching the intro paragraph */
+    .feature-description {
+      display: block;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 4px;
     }
 
     /* Make images scale nicely on smaller screens */
@@ -133,34 +136,48 @@
     <h2>Key Features</h2>
     <p>
       1. <strong>Modular GUI Architecture</strong><br>
-      Designed and implemented a scalable, multi-tabbed GUI using PyQt5, separating Basic, Advanced, 
-      and Manage Lists views to promote maintainability and extensibility.<br><br>
+      <span class="feature-description">
+        Designed and implemented a scalable, multi-tabbed GUI using PyQt5, separating Basic, Advanced, 
+        and Manage Lists views to promote maintainability and extensibility.
+      </span><br><br>
 
       2. <strong>Real-Time System Resource Monitoring</strong><br>
-      Integrated Psutil to track and display CPU, Memory, and GPU usage across active processes, 
-      with rolling average calculations for consistent performance insights.<br><br>
+      <span class="feature-description">
+        Integrated Psutil to track and display CPU, Memory, and GPU usage across active processes, 
+        with rolling average calculations for consistent performance insights.
+      </span><br><br>
 
       3. <strong>Automated Process Optimization</strong><br>
-      Engineered a One-Click Boost system to safely terminate blacklisted processes while ensuring 
-      critical system stability, following best practices for process management.<br><br>
+      <span class="feature-description">
+        Engineered a One-Click Boost system to safely terminate blacklisted processes while ensuring 
+        critical system stability, following best practices for process management.
+      </span><br><br>
 
       4. <strong>Dynamic Whitelist and Blacklist Management</strong><br>
-      Built a persistent JSON-backed system for user-defined whitelist/blacklist control, 
-      providing fine-grained management of process behavior within the application.<br><br>
+      <span class="feature-description">
+        Built a persistent JSON-backed system for user-defined whitelist/blacklist control, 
+        providing fine-grained management of process behavior within the application.
+      </span><br><br>
 
       5. <strong>Safe Termination with System Integrity Checks</strong><br>
-      Implemented safeguards to detect and prevent termination of essential Windows system processes, 
-      including administrative privilege verification and fail-safes.<br><br>
+      <span class="feature-description">
+        Implemented safeguards to detect and prevent termination of essential Windows system processes, 
+        including administrative privilege verification and fail-safes.
+      </span><br><br>
 
       6. <strong>Data Handling and Caching</strong><br>
-      Developed efficient local caching mechanisms to store 
-      user preferences and previous process states, minimizing redundant 
-      system calls and improving runtime performance.<br><br>
+      <span class="feature-description">
+        Developed efficient local caching mechanisms to store 
+        user preferences and previous process states, minimizing redundant 
+        system calls and improving runtime performance.
+      </span><br><br>
       
       7. <strong>Community Engagement and Validation</strong><br>
-      Open-sourced on GitHub achieving over 23,000+ views across different social media platforms, 
-      demonstrating strong community traction, feedback-driven iterations, 
-      and collaborative development.<br><br>
+      <span class="feature-description">
+        Open-sourced on GitHub achieving over 23,000+ views across different social media platforms, 
+        demonstrating strong community traction, feedback-driven iterations, 
+        and collaborative development.
+      </span><br><br>
       
     </p>
   </div>
