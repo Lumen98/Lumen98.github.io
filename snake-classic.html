@@ -1,81 +1,189 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="projects.css">
-    <!-- Work Sans -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
-    <!-- Rajdhani (Cyberpunk 2077 UI Font) -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
-    <!-- Source Code Pro -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900'>
-    <!-- viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- jQuery -->
-    <script src="jquery-3.6.0.min.js"></script>
-    <!-- Navigation bar -->
-    <script src="nav.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snake Classic</title>
 
-  <body>
-    <!-- Navigation -->
-    <nav-bar></nav-bar>
+  <!-- Fonts (matching FPS_Booster) -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
 
-    <!-- Section: Header -->
-    <div class="project-page-header">
-      <div class="project-path">/Projects/Snake_Classic</div>
-      <div class="img-container">
-        <img src="Assets/scale/snake-classic.jpeg" class="header-photo">
-      </div>
-      <div class="project-page-section">
-        <h1>Snake Classic<h1>
-        <p>
-          Snake is one of those instantly recognizable games for everyone. It brings
-          back a nostalgia that is unreplicable. I wanted to remake this game but with my own 
-          custom features. The project is a rendition of the classic Snake game developed using 
-          the LibGDX framework. The game is designed to be played in a grid where the snake moves 
-          around, consuming apples to grow in size, while avoiding collisions with itself, rocks, 
-          and rotten apples. (hint those are the new features)<br><br>
-        </p>
-      </div>
-    </div>
-    <!-- Section: Header -->
-          
-    <div class=project-page-section>
-      <h2>Key Features</h2>
-      <p>
-        1. Game Initialization<br><br>
-        The game is launched using the GameLauncher class. Screen dimensions 
-        are set using constants for width and height. The game instance is 
-        created using the Snake class.<br><br>
-        2. Game Components<br><br>
-         Snake: The snake is represented by a head (SnakeHead) and a body (SnakePart). 
-        The snake moves in different directions based on user input.<br><br>
-        Apple: Represented by the Apple class. When the snake consumes an apple, it grows in size.<br><br>
-        Rock: Represented by the Rock class. Colliding with a rock ends the game.<br><br>
-        Rotten Apples: Represented by the RottenApples class. Consuming a rotten apple 
-        clears the snake’s body and resets the score. (You definitely do not want to hit this...)<br><br>
-        3. Game Mechanics<br><br>
-        The snake’s movement is controlled using arrow keys.
-        The game checks for collisions with apples, rocks, rotten apples, the snake’s body, 
-        and the game’s boundaries. The game keeps track of the player’s score and high score, 
-        which is saved using Preferences. The game features a grid background to represent the 
-        playing field.<br><br>
-        4. Graphics and Visualization<br><br>
-        The game uses ShapeRenderer for drawing game components. The snake’s head is represented 
-        using a texture image (snakeHeadPic). The game has a menu screen with a “START!” button.
-        The game displays the current score and high score on the screen.<br><br>
-        5. Game Flow<br><br>
-        The game starts with a menu screen. Upon clicking “START!”, the game begins. The game 
-        continues until the snake collides with a rock, the game’s boundaries, or itself.
-        If the game ends, the player is returned to the menu screen.<br><br>
-        6. Utility Classes<br><br>
-        Constants: A class that holds various constants used throughout the game, such as screen 
-        dimensions and grid size.<br><br>
-        Direction: An enumeration representing the possible directions the snake can move in.<br><br>
-      </p>
-    </div>
-  </body>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery -->
+  <script src="jquery-3.6.0.min.js"></script>
+  <!-- Navigation bar -->
+  <script src="nav.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
+
+  <!-- INLINE CSS (from FPS_Booster style) -->
+  <style>
+    body {
+      font-family: "Rajdhani", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .page-path {
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 24px 0;
+      opacity: 0.8;
+    }
+
+    .three-images-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      width: 90%;
+      margin: 48px auto;
+      justify-content: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    .top-image {
+      width: 480px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 2px solid black;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-page-section {
+      width: 80%;
+      margin: 24px auto;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 64px;
+      margin: 0 0 24px 0;
+    }
+
+    .project-page-section h2 {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .project-page-section p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    /* Key Features styles */
+    .key-features-section {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .key-features-section .feature {
+      margin-bottom: 12px;
+    }
+    .key-features-section strong {
+      font-weight: 700;
+    }
+    .key-features-section .feature-description {
+      display: block;
+      font-weight: 500;
+      font-size: 16px; /* Match intro paragraph */
+      line-height: 1.5; /* Match intro paragraph */
+      margin-top: 4px;
+    }
+
+    /* Make images scale nicely on smaller screens */
+    @media (max-width: 768px) {
+      .top-image {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav-bar></nav-bar>
+
+  <!-- Project path (FPS_Booster style) -->
+  <p class="page-path">/Projects/Snake_Classic</p>
+
+  <!-- Image Container (matching FPS_Booster style) -->
+  <div class="three-images-container">
+    <img src="Assets/scale/snake-classic.jpeg" alt="Snake Classic" class="top-image">
+  </div>
+
+  <!-- Project Info -->
+  <div class="project-page-section">
+    <h1>Snake Classic</h1>
+    <p>
+      Snake is one of those instantly recognizable games for everyone. It brings
+      back a nostalgia that is unreplicable. I wanted to remake this game but with my own
+      custom features. The project is a rendition of the classic Snake game developed
+      using the LibGDX framework. The game is designed to be played in a grid where
+      the snake moves around, consuming apples to grow in size, while avoiding
+      collisions with itself, rocks, and rotten apples (hint: those are the new features).
+    </p>
+  </div>
+
+  <!-- Key Features Section -->
+  <div class="project-page-section key-features-section">
+    <h2>Key Features</h2>
+
+    <p>
+      1. <strong>Game Initialization</strong><br>
+      The game is launched using the <code>GameLauncher</code> class. Screen dimensions 
+      are set using constants for width and height. The game instance is created via 
+      the <code>Snake</code> class.
+    </p>
+
+    <p>
+      2. <strong>Game Components</strong><br>
+      <strong>Snake</strong>: Represented by a head (<code>SnakeHead</code>) and body (<code>SnakePart</code>).  
+      <strong>Apple</strong>: When consumed, the snake grows in size.  
+      <strong>Rock</strong>: Colliding with one ends the game.  
+      <strong>Rotten Apples</strong>: Consuming these clears the snake’s body and resets the score.
+    </p>
+
+    <p>
+      3. <strong>Game Mechanics</strong><br>
+      The snake moves based on arrow keys. The system checks for collisions with apples, rocks, 
+      rotten apples, the snake’s body, and boundaries. Player score and high score are tracked, 
+      saved, and updated using <code>Preferences</code>.
+    </p>
+
+    <p>
+      4. <strong>Graphics and Visualization</strong><br>
+      The game uses <code>ShapeRenderer</code> for most drawing, with a texture image 
+      (<code>snakeHeadPic</code>) for the snake’s head. There’s a simple menu screen with a 
+      “START!” button, plus on-screen display of current and high scores.
+    </p>
+
+    <p>
+      5. <strong>Game Flow</strong><br>
+      The game starts in a menu screen. Upon “START!”, it transitions to gameplay. The game 
+      ends when the snake collides with its own body, a rock, or the boundary. Afterwards, 
+      the player is returned to the menu.
+    </p>
+
+    <p>
+      6. <strong>Utility Classes</strong><br>
+      <strong>Constants</strong>: Holds dimension/grid constants.  
+      <strong>Direction</strong>: An enum representing potential snake movement directions.
+    </p>
+
+  </div>
+
+</body>
 </html>
