@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Snake Classic</title>
+  <title>Snake_Classic</title>
 
-  <!-- Fonts (matching FPS_Booster) -->
+  <!-- Fonts (from FPS_Booster) -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
 
@@ -13,12 +13,14 @@
 
   <!-- jQuery -->
   <script src="jquery-3.6.0.min.js"></script>
-  <!-- Navigation bar -->
+
+  <!-- Navigation bar script -->
   <script src="nav.js"></script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
 
-  <!-- INLINE CSS (from FPS_Booster style) -->
+  <!-- INLINE CSS (from FPS_Booster) -->
   <style>
     body {
       font-family: "Rajdhani", sans-serif;
@@ -48,7 +50,7 @@
     }
 
     .top-image {
-      width: 480px;
+      width: 550px;
       height: auto;
       object-fit: cover;
       border-radius: 6px;
@@ -98,8 +100,8 @@
     .key-features-section .feature-description {
       display: block;
       font-weight: 500;
-      font-size: 16px; /* Match intro paragraph */
-      line-height: 1.5; /* Match intro paragraph */
+      font-size: 16px;
+      line-height: 1.5;
       margin-top: 4px;
     }
 
@@ -110,30 +112,31 @@
       }
     }
   </style>
+
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav-bar></nav-bar>
 
-  <!-- Project path (FPS_Booster style) -->
+  <!-- Project path centered under navbar -->
   <p class="page-path">/Projects/Snake_Classic</p>
 
-  <!-- Image Container (matching FPS_Booster style) -->
+  <!-- Single image container -->
   <div class="three-images-container">
     <img src="Assets/scale/snake-classic.jpeg" alt="Snake Classic" class="top-image">
   </div>
 
-  <!-- Project Info -->
+  <!-- Title / Project Info -->
   <div class="project-page-section">
-    <h1>Snake Classic</h1>
+    <h1>Snake_Classic</h1>
     <p>
       Snake is one of those instantly recognizable games for everyone. It brings
       back a nostalgia that is unreplicable. I wanted to remake this game but with my own
-      custom features. The project is a rendition of the classic Snake game developed
-      using the LibGDX framework. The game is designed to be played in a grid where
-      the snake moves around, consuming apples to grow in size, while avoiding
-      collisions with itself, rocks, and rotten apples (hint: those are the new features).
+      custom features. This project is a rendition of the classic Snake game developed
+      using the LibGDX framework. The game is played in a grid where the snake moves around,
+      consuming apples to grow in size while avoiding collisions with itself, rocks,
+      and rotten apples (hint: those are the new features).
     </p>
   </div>
 
@@ -141,47 +144,59 @@
   <div class="project-page-section key-features-section">
     <h2>Key Features</h2>
 
-    <p>
+    <div class="feature">
       1. <strong>Game Initialization</strong><br>
-      The game is launched using the <code>GameLauncher</code> class. Screen dimensions 
-      are set using constants for width and height. The game instance is created via 
-      the <code>Snake</code> class.
-    </p>
+      <span class="feature-description">
+        The game is launched using the <code>GameLauncher</code> class. Screen dimensions
+        are defined through constants, and the game instance is initialized through the
+        <code>Snake</code> class.
+      </span>
+    </div>
 
-    <p>
+    <div class="feature">
       2. <strong>Game Components</strong><br>
-      <strong>Snake</strong>: Represented by a head (<code>SnakeHead</code>) and body (<code>SnakePart</code>).  
-      <strong>Apple</strong>: When consumed, the snake grows in size.  
-      <strong>Rock</strong>: Colliding with one ends the game.  
-      <strong>Rotten Apples</strong>: Consuming these clears the snake’s body and resets the score.
-    </p>
+      <span class="feature-description">
+        <strong>Snake</strong>: Includes a head (<code>SnakeHead</code>) and body (<code>SnakePart</code>).<br>
+        <strong>Apple</strong>: Increases snake size when consumed.<br>
+        <strong>Rock</strong>: Causes a game over if hit.<br>
+        <strong>Rotten Apples</strong>: Resets the snake's body and score when eaten.
+      </span>
+    </div>
 
-    <p>
+    <div class="feature">
       3. <strong>Game Mechanics</strong><br>
-      The snake moves based on arrow keys. The system checks for collisions with apples, rocks, 
-      rotten apples, the snake’s body, and boundaries. Player score and high score are tracked, 
-      saved, and updated using <code>Preferences</code>.
-    </p>
+      <span class="feature-description">
+        The snake moves with arrow key inputs. Collision detection manages interactions with
+        apples, rocks, rotten apples, the snake's body, and game boundaries. Scores and
+        high scores are tracked and saved using <code>Preferences</code>.
+      </span>
+    </div>
 
-    <p>
+    <div class="feature">
       4. <strong>Graphics and Visualization</strong><br>
-      The game uses <code>ShapeRenderer</code> for most drawing, with a texture image 
-      (<code>snakeHeadPic</code>) for the snake’s head. There’s a simple menu screen with a 
-      “START!” button, plus on-screen display of current and high scores.
-    </p>
+      <span class="feature-description">
+        The game utilizes <code>ShapeRenderer</code> for rendering, with a texture
+        (<code>snakeHeadPic</code>) for the snake's head. A simple menu features a
+        “START!” button, and current and high scores are displayed during gameplay.
+      </span>
+    </div>
 
-    <p>
+    <div class="feature">
       5. <strong>Game Flow</strong><br>
-      The game starts in a menu screen. Upon “START!”, it transitions to gameplay. The game 
-      ends when the snake collides with its own body, a rock, or the boundary. Afterwards, 
-      the player is returned to the menu.
-    </p>
+      <span class="feature-description">
+        The game begins with a menu screen. Upon pressing “START!”, gameplay starts.
+        The game ends when the snake collides with its body, a rock, or the boundary,
+        after which the player is returned to the menu screen.
+      </span>
+    </div>
 
-    <p>
+    <div class="feature">
       6. <strong>Utility Classes</strong><br>
-      <strong>Constants</strong>: Holds dimension/grid constants.  
-      <strong>Direction</strong>: An enum representing potential snake movement directions.
-    </p>
+      <span class="feature-description">
+        <strong>Constants</strong>: Stores dimension and grid-related constants.<br>
+        <strong>Direction</strong>: Enum representing possible snake movement directions.
+      </span>
+    </div>
 
   </div>
 
