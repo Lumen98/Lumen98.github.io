@@ -1,89 +1,194 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="projects.css">
-    <!-- Work Sans -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
-    <!-- Rajdhani (Cyberpunk 2077 UI Font) -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
-    <!-- Source Code Pro -->
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900'>
-    <!-- viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- jQuery -->
-    <script src="jquery-3.6.0.min.js"></script>
-    <!-- Navigation bar -->
-    <script src="nav.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Falling Sand Game</title>
 
-  <body>
-    <!-- Navigation -->
-    <nav-bar></nav-bar>
+  <!-- Fonts (matching FPS_Booster) -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900'>
 
-    <!-- Section: Header -->
-    <div class="project-page-header">
-      <div class="project-path">/Projects/Falling_Sand_Game</div>
-      <div class="img-container">
-        <img src="Assets/scale/falling-sand-game.jpeg" class="header-photo">
-      </div>
-      <div class="project-page-section">
-        <h1>Falling Sand Game<h1>
-        <p>
-          This Falling Sand Game is a Java-based console application designed to 
-          visually simulate the behavior of various particles, such as sand, water, 
-          and ice. The application provides a graphical representation of these particles 
-          and their interactions in a grid-based environment.<br><br>
-        </p>
-      </div>
-    </div>
-    <!-- Section: Header -->
-          
-    <div class=project-page-section>
-      <h2>Key Features</h2>
-      <p>
-        1. User Interaction through GUI<br><br>
-        The application utilizes Java’s AWT and Swing libraries to create an 
-        interactive graphical interface. Users can select different particle 
-        types and place them on a grid. The application displays the movement 
-        and interactions of these particles in real time.<br><br>
-        2. Particle Simulation<br><br>
-        The system supports various particle types, including:<br><br>
-        Empty (Eraser)<br><br>
-        Metal<br><br>
-        Water<br><br>
-        Sand<br><br>
-        Ice<br><br>
-        Glass<br><br>
-        Each particle type has its unique behavior and interactions with other particles. 
-        For example, sand particles fall downwards until they hit another particle, and 
-        ice particles can melt into water over time.<br><br>
-        3. Visualization<br><br>
-        The SandDisplay class is responsible for the visualization of the grid and particles.
-        Each cell in the grid can contain a particle, and the color of the cell represents 
-        the type of particle it contains. The application updates and repaints the display in 
-        real time to show particle movements and interactions.<br><br>
-        4. User Controls<br><br>
-        Users can interact with the application using mouse clicks to place particles on the grid.
-        A slider allows users to adjust the simulation speed. Buttons enable users to select the 
-        type of particle they want to place.<br><br>
-        5. Randomized Particle Movement<br><br>
-        The step() method in the SandLab class is responsible for simulating the movement and 
-        interactions of particles. Particle movements are randomized to create a dynamic and 
-        unpredictable simulation.<br><br>
-        6. Error Handling and Robustness<br><br>
-        The system includes checks to ensure particles do not move outside the grid boundaries.
-        Interactions between different particle types, such as sand and water, are handled to 
-        ensure realistic behavior.<br><br>
-        Conclusion<br><br>
-        This Falling Sand Game offers a captivating visual representation of particle behavior 
-        and interactions. By allowing users to interactively place and observe particles, the 
-        application provides insights into the dynamics of particle systems. Whether used for 
-        educational purposes or sheer entertainment, this application serves as a testament to 
-        the power of simulation and visualization in understanding complex systems.<br><br>
-      </p>
-    </div>
-  </body>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jQuery -->
+  <script src="jquery-3.6.0.min.js"></script>
+  <!-- Navigation bar -->
+  <script src="nav.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
+
+  <!-- INLINE CSS (from FPS_Booster style) -->
+  <style>
+    body {
+      font-family: "Rajdhani", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .page-path {
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 24px 0;
+      opacity: 0.8;
+    }
+
+    .three-images-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      width: 90%;
+      margin: 48px auto;
+      justify-content: center;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    .top-image {
+      width: 480px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 2px solid black;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-page-section {
+      width: 80%;
+      margin: 24px auto;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 64px;
+      margin: 0 0 24px 0;
+    }
+
+    .project-page-section h2 {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .project-page-section p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    /* Key Features styles */
+    .key-features-section {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+    .key-features-section .feature {
+      margin-bottom: 12px;
+    }
+    .key-features-section strong {
+      font-weight: 700;
+    }
+    .key-features-section .feature-description {
+      display: block;
+      font-weight: 500;
+      font-size: 16px; /* Match intro paragraph */
+      line-height: 1.5; /* Match intro paragraph */
+      margin-top: 4px;
+    }
+
+    /* Make images scale nicely on smaller screens */
+    @media (max-width: 768px) {
+      .top-image {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav-bar></nav-bar>
+
+  <!-- Project path (FPS_Booster style) -->
+  <p class="page-path">/Projects/Falling_Sand_Game</p>
+
+  <!-- Image Container (mimicking FPS_Booster three-images layout, even if only one image) -->
+  <div class="three-images-container">
+    <img src="Assets/scale/falling-sand-game.jpeg" alt="Falling Sand Game" class="top-image">
+  </div>
+
+  <!-- Project Info -->
+  <div class="project-page-section">
+    <h1>Falling Sand Game</h1>
+    <p>
+      This Falling Sand Game is a Java-based console application designed to 
+      visually simulate the behavior of various particles, such as sand, water, 
+      and ice. The application provides a graphical representation of these particles 
+      and their interactions in a grid-based environment.
+    </p>
+  </div>
+
+  <!-- Key Features Section -->
+  <div class="project-page-section key-features-section">
+    <h2>Key Features</h2>
+
+    <p>
+      1. <strong>User Interaction through GUI</strong><br>
+      The application utilizes Java’s AWT and Swing libraries to create an 
+      interactive graphical interface. Users can select different particle 
+      types and place them on a grid. The application displays the movement 
+      and interactions of these particles in real time.
+    </p>
+
+    <p>
+      2. <strong>Particle Simulation</strong><br>
+      The system supports various particle types, including Empty (Eraser), Metal, Water, 
+      Sand, Ice, and Glass. Each has unique behaviors and interactions. For example, 
+      sand falls downward until it hits another particle, and ice can melt into water over time.
+    </p>
+
+    <p>
+      3. <strong>Visualization</strong><br>
+      The <code>SandDisplay</code> class is responsible for the visualization 
+      of the grid and particles. Each cell can contain a particle, and the cell’s color 
+      reflects the type of particle. The application updates and repaints in real time to 
+      show movement and interactions.
+    </p>
+
+    <p>
+      4. <strong>User Controls</strong><br>
+      Users can place particles on the grid with mouse clicks. A slider lets them adjust 
+      simulation speed. Buttons allow them to select the particle type to place.
+    </p>
+
+    <p>
+      5. <strong>Randomized Particle Movement</strong><br>
+      The <code>step()</code> method in the <code>SandLab</code> class simulates 
+      particle movements. Randomization adds dynamic, unpredictable behavior to the simulation.
+    </p>
+
+    <p>
+      6. <strong>Error Handling and Robustness</strong><br>
+      The application prevents particles from moving outside the grid and properly handles 
+      interactions like sand and water mixing. These checks ensure realistic behavior 
+      without errors.
+    </p>
+
+    <p>
+      <strong>Conclusion</strong><br>
+      This Falling Sand Game provides a captivating visual representation of particle 
+      behaviors. By allowing users to place and observe different particle types, 
+      it offers educational insight into particle dynamics and an entertaining simulation 
+      environment.
+    </p>
+  </div>
+
+</body>
 </html>
