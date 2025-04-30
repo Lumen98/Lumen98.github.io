@@ -481,6 +481,25 @@ body {
   height: auto; /* Maintain the aspect ratio */
 }
 
+/* ---- uniform vertical rhythm ----------------------------------- */
+
+/* 1️⃣  Give every section that follows another section a top-gap   */
+.section + .section {
+  margin-top: 4rem;          /* ← adjust to taste (3–5 rem usually works) */
+}
+
+/* 2️⃣  Zero-out any top/bottom margins the inner wrappers add      */
+.profile-container,
+.info-container,
+#skills-container       /* you can list others here if they pop up later */
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------- */
+
+
 /* projects.html */
 
 
