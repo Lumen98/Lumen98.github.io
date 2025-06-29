@@ -36,7 +36,7 @@ function hover(element) {
     $("#personal-site-details").css('display', 'grid');
   }
   if(element.id == "secureAI") {
-    $("#fps-booster-details").css('display', 'grid');
+    $("#secureAI-details").css('display', 'grid');
   }
   if(element.id == "fps-booster") {
     $("#fps-booster-details").css('display', 'grid');
