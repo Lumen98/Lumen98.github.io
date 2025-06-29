@@ -103,8 +103,8 @@
     .key-features-section .feature-description {
       display: block;
       font-weight: 500;
-      font-size: 16px; /* Match intro paragraph */
-      line-height: 1.5; /* Match intro paragraph */
+      font-size: 16px;
+      line-height: 1.5;
       margin-top: 4px;
     }
 
@@ -114,6 +114,11 @@
         width: 90%;
       }
     }
+
+    /* Link hover style */
+    .project-page-section a:hover {
+      color: #1a73e8;
+    }
   </style>
 
 </head>
@@ -121,82 +126,86 @@
 
   <!-- Navigation Bar -->
   <nav-bar></nav-bar>
-<!-- Project path centered under navbar -->
-<p class="project-path page-path">/Projects/SecureAI</p>
 
-<!-- TOP: Three Images -->
-<div class="three-images-container">
-  <img src="Assets/scale/SecureAI_1.jpeg" alt="SecureAI screenshot 1" class="top-image">
-  <img src="Assets/scale/SecureAI_2.jpeg" alt="SecureAI screenshot 2" class="top-image">
-  <img src="Assets/scale/SecureAI_3.jpeg" alt="SecureAI screenshot 3" class="top-image">
-</div>
+  <!-- Project path centered under navbar -->
+  <p class="project-path page-path">/Projects/SecureAI</p>
 
-<!-- Title / Project Info -->
-<div class="project-page-section">
-  <h1>SecureAI</h1>
-  <p>
-    SecureAI is a privacy-first app that helps users detect, monitor, and respond to data breaches in real time. 
-    With AI-powered security analysis and a user-friendly design, it empowers anyone to check their exposure, monitor personal emails, and get actionable advice — all without compromising their data privacy.
-  </p>
-
-  <p style="font-weight: 500; font-size: 16px;">
-    🔗 <a href="https://secureai-dev.github.io/SecureAIPrivacy.github.io/mainPage.html" target="_blank" style="text-decoration: underline; color: #333;">
-      Visit the SecureAI Home Page
-    </a>
-  </p>
-</div>
-
-<!-- Key Features Section -->
-<div class="project-page-section key-features-section">
-  <h2>Key Features</h2>
-
-  <div class="feature">
-    1. <strong>Instant Breach Check</strong><br>
-    <span class="feature-description">
-      Quickly check if an email address appears in known data breach dumps using a privacy-respecting search — 
-      no data is stored or sent to external servers.
-    </span>
+  <!-- TOP: Three Images -->
+  <div class="three-images-container">
+    <img src="Assets/scale/SecureAI_1.jpeg" alt="SecureAI screenshot 1" class="top-image">
+    <img src="Assets/scale/SecureAI_2.jpeg" alt="SecureAI screenshot 2" class="top-image">
+    <img src="Assets/scale/SecureAI_3.jpeg" alt="SecureAI screenshot 3" class="top-image">
   </div>
 
-  <div class="feature">
-    2. <strong>Real-Time Breach Monitoring</strong><br>
-    <span class="feature-description">
-      Continuously monitor selected email addresses and get alerts as soon as they appear in any future data leaks.
-    </span>
+  <!-- Title / Project Info -->
+  <div class="project-page-section">
+    <h1>SecureAI</h1>
+    <p>
+      SecureAI is a privacy-first app that helps users detect, monitor, and respond to data breaches in real time. 
+      With AI-powered security analysis and a user-friendly design, it empowers anyone to check their exposure, monitor personal emails, and get actionable advice — all without compromising their data privacy.
+    </p>
+
+    <p style="font-weight: 500; font-size: 16px;">
+      🔗 <a href="https://secureai-dev.github.io/SecureAIPrivacy.github.io/mainPage.html" target="_blank" style="text-decoration: underline; color: #333;">
+        Visit the SecureAI Home Page
+      </a>
+    </p>
   </div>
 
-  <div class="feature">
-    3. <strong>Detailed Breach Breakdown</strong><br>
-    <span class="feature-description">
-      Shows which accounts were affected, what data was exposed, when it occurred, and prioritizes which passwords to change first.
-    </span>
+  <!-- Key Features Section -->
+  <div class="project-page-section key-features-section">
+    <h2>Key Features</h2>
+
+    <div class="feature">
+      1. <strong>Instant Breach Check</strong><br>
+      <span class="feature-description">
+        Quickly check if an email address appears in known data breach dumps using a privacy-respecting search — 
+        no data is stored or sent to external servers.
+      </span>
+    </div>
+
+    <div class="feature">
+      2. <strong>Real-Time Breach Monitoring</strong><br>
+      <span class="feature-description">
+        Continuously monitor selected email addresses and get alerts as soon as they appear in any future data leaks.
+      </span>
+    </div>
+
+    <div class="feature">
+      3. <strong>Detailed Breach Breakdown</strong><br>
+      <span class="feature-description">
+        Shows which accounts were affected, what data was exposed, when it occurred, and prioritizes which passwords to change first.
+      </span>
+    </div>
+
+    <div class="feature">
+      4. <strong>AI Security Advisor</strong><br>
+      <span class="feature-description">
+        An interactive AI assistant that provides tailored cybersecurity advice — from best password practices to breach response.
+      </span>
+    </div>
+
+    <div class="feature">
+      5. <strong>Security Score Tracking</strong><br>
+      <span class="feature-description">
+        Offers a personal Security Score that updates as users secure more accounts or respond to breach alerts.
+      </span>
+    </div>
+
+    <div class="feature">
+      6. <strong>Local-First Data Handling</strong><br>
+      <span class="feature-description">
+        No user data is stored in the cloud. All breach lookups and risk assessments are performed locally on-device.
+      </span>
+    </div>
+
+    <div class="feature">
+      7. <strong>User-Centric Privacy Model</strong><br>
+      <span class="feature-description">
+        SecureAI is built around strict privacy principles. It doesn’t track users or sell personal information, and all code is open-source for transparency.
+      </span>
+    </div>
   </div>
 
-  <div class="feature">
-    4. <strong>AI Security Advisor</strong><br>
-    <span class="feature-description">
-      An interactive AI assistant that provides tailored cybersecurity advice — from best password practices to breach response.
-    </span>
-  </div>
-
-  <div class="feature">
-    5. <strong>Security Score Tracking</strong><br>
-    <span class="feature-description">
-      Offers a personal Security Score that updates as users secure more accounts or respond to breach alerts.
-    </span>
-  </div>
-
-  <div class="feature">
-    6. <strong>Local-First Data Handling</strong><br>
-    <span class="feature-description">
-      No user data is stored in the cloud. All breach lookups and risk assessments are performed locally on-device.
-    </span>
-  </div>
-
-  <div class="feature">
-    7. <strong>User-Centric Privacy Model</strong><br>
-    <span class="feature-description">
-      SecureAI is built around strict privacy principles. It doesn’t track users or sell personal information, and all code is open-source for transparency.
-    </span>
-  </div>
-</div>
+</body>
+</html>
