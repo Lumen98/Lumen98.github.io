@@ -1,4 +1,9 @@
 const onMouseMove = (e) =>{
+  $("#pastry-details").css({
+    left: Math.max(window.scrollX + 8, Math.min(e.pageX + 4,
+      window.scrollX + document.documentElement.clientWidth - $("#pastry-details").outerWidth() - 8)),
+    top: (e.pageY + 4)
+  });
   $("#personal-site-details").css({
     left: (e.pageX + 4),
     top: (e.pageY + 4)
@@ -32,6 +37,9 @@ const onMouseMove = (e) =>{
 function hover(element) {
   element.setAttribute('src', 'Assets/folder_icon_hover.svg');
   document.addEventListener('mousemove', onMouseMove);
+  if(element.id == "pastry") {
+    $("#pastry-details").css('display', 'grid');
+  }
   if(element.id == "personal-site") {
     $("#personal-site-details").css('display', 'grid');
   }
@@ -57,6 +65,7 @@ function hover(element) {
 
 function unhover(element) {
   element.setAttribute('src', 'Assets/folder_icon_default.svg');
+  $("#pastry-details").css('display', 'none');
   $("#personal-site-details").css('display', 'none');
   $("#secureAI-details").css('display', 'none');
   $("#fps-booster-details").css('display', 'none');

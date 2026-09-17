@@ -126,7 +126,7 @@ class NavigationBar extends HTMLElement {
 
         <a href="index.html" class="logo_container">
           <!-- Small logo for small screens -->
-          <img src="Assets/small_logo.svg" class="logo_small" id="logo">
+          <img src="Assets/small_logo.svg" class="logo_small" id="logo" alt="Kareem Nabulsi home">
           <!-- Full name for large screens -->
           <h1 class="logo_lrg">Kareem Nabulsi</h1>
         </a>
@@ -155,7 +155,7 @@ $(document).ready(function(){
   $('#nav-item-about-indicator').each(function() {
     if ((window.location.pathname.indexOf($('#nav-item-about').attr('href'))) > -1) {
         $(this).toggleClass('current');
-        $('#logo').attr("src", "Assets/small_logo_dark.png")
+        $('#logo').css("filter", "invert(1)")
         root.style.setProperty("--foreground-color", "#FFFFFF")
     }
   });

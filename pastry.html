@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pastry is a macOS menu bar clipboard manager by Kareem Nabulsi, built with Swift, SwiftUI, and AppKit. Available on the Mac App Store.">
+  <title>Pastry | Kareem Nabulsi</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200..900">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="icon" type="image/svg+xml" href="Assets/small_logo.svg">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="nav.js"></script>
+</head>
+<body class="pastry-page">
+  <nav-bar></nav-bar>
+
+  <nav class="project-path page-path" aria-label="Breadcrumb">
+    <a href="projects.html">/Projects</a><span aria-current="page">/Pastry</span>
+  </nav>
+
+  <main class="pastry-content">
+    <header class="pastry-hero project-page-section">
+      <img src="Assets/pastry-logo.png" class="pastry-icon" width="176" height="176" alt="Pastry app icon: a glowing croissant">
+      <div>
+        <p class="pastry-meta">macOS app &middot; Released December 2025</p>
+        <h1>Pastry</h1>
+        <p>
+          A clipboard manager that lives in your Mac's menu bar. Keep track of what you've copied,
+          organize snippets into folders, and paste them with a keyboard shortcut.
+        </p>
+        <div class="pastry-links">
+          <a href="https://apps.apple.com/us/app/pastry/id6756455189?mt=12" target="_blank" rel="noopener noreferrer" class="pastry-download">View on the Mac App Store</a>
+          <a href="https://pastryfeedback.github.io/" target="_blank" rel="noopener noreferrer">Visit Pastry's website &nearr;</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="project-page-section key-features-section" aria-labelledby="pastry-features">
+      <h2 id="pastry-features">Key features</h2>
+
+      <div class="feature">
+        1. <strong>Clipboard History</strong><br>
+        <span class="feature-description">
+          Automatically saves recent clips so you can get back to something you copied earlier.
+        </span>
+      </div>
+
+      <div class="feature">
+        2. <strong>Global Hotkeys</strong><br>
+        <span class="feature-description">
+          Paste saved clips from other apps with keyboard shortcuts, without opening the menu each time.
+        </span>
+      </div>
+
+      <div class="feature">
+        3. <strong>Folders for Snippets</strong><br>
+        <span class="feature-description">
+          Keep text you reuse in named folders, with your clipboard data stored locally on your Mac.
+        </span>
+      </div>
+
+      <div class="feature">
+        4. <strong>Native macOS Architecture</strong><br>
+        <span class="feature-description">
+          Built with Swift and SwiftUI using MVVM to separate the interface from the app's state and logic.
+          AppKit APIs support clipboard monitoring, global hotkeys, and persistent, folder-based snippet storage.
+        </span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
