@@ -61,74 +61,81 @@
 
     <!-- SECTION: Profile -->
     <div class="section">
-      <!-- "Profile" - Picture, Education, and Contact info all in one. -->
       <div class="profile-container">
-        <img src="Assets/kareem-logo.gif" id="profile-image">
-        <div id="job-title">Software Engineer</div>
+        <img src="Assets/kareem-logo.gif" id="profile-image" alt="Kareem">
       </div>
     </div>
     <!-- SECTION: Profile -->
 
-    <!-- SECTION: Education -->
-    <div class="section">
-      <div class="info-container">
-        <img src="Assets/edu_title.svg" id="edu-title" alt="Education">
+    <div class="profile-details">
+      <h1 id="job-title">Software Engineer</h1>
+
+      <section aria-labelledby="education-heading">
+        <h2 id="education-heading" class="profile-section-title">
+          <img src="Assets/edu_title.svg" id="edu-title" alt="Education">
+        </h2>
         <div id="edu-info">
-          <h2>UC San Diego</h2>
+          <h3>UC San Diego</h3>
           <p>B.S. in Computer Science</p>
           <p>Graduating June 2027</p>
           <p>GPA: 3.90</p>
         </div>
-      </div>
-    </div>
-    <!-- SECTION: Education -->
+      </section>
 
-    <!-- SECTION: Contact -->
-    <div class="section">
-      <div class="info-container">
-        <img src="Assets/contact_title.svg" id="contact-title">
-        <div id="contact-info"><a href="mailto:ktnabulsi@gmail.com">ktnabulsi@gmail.com</a></div>
-      </div>
-    </div>
-    <!-- SECTION: Contact -->
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="profile-section-title">
+          <img src="Assets/contact_title.svg" id="contact-title" alt="Contact">
+        </h2>
+        <p id="contact-info"><a href="mailto:ktnabulsi@gmail.com">ktnabulsi@gmail.com</a></p>
+      </section>
 
-    <!-- SECTION: Skills -->
-    <div class="section">
-      <div id="skills-container">
-        <img src="Assets/skills_title.svg" id="skills-title">
+      <section id="skills-container" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="profile-section-title">
+          <img src="Assets/skills_title.svg" id="skills-title" alt="Skills">
+        </h2>
 
-        <!-- Languages -->
-        <div id="skills-subtitle">LANGUAGES</div>
-        <div id="skills-grid">
-          <!-- Screenshots for languages -->
-          <!-- Python -->
-          <img src="Assets/skill_1.svg" class="skill">
-          <!-- Java -->
-          <img src="Assets/skill_3.svg" class="skill">
-          <!-- C/C++ -->
-          <img src="Assets/skill_4.svg" class="skill">
+        <div class="skills-group">
+          <h3 id="languages-title" class="skills-subtitle">Languages</h3>
+          <ul class="skills-grid skills-languages" aria-labelledby="languages-title">
+            <li class="skill"><span>Python</span></li>
+            <li class="skill"><span>Java</span></li>
+            <li class="skill"><span>C / C++</span></li>
+            <li class="skill"><span>Go</span></li>
+            <li class="skill"><span>Lua</span></li>
+            <li class="skill"><span>Swift</span></li>
+          </ul>
         </div>
 
-        <!-- Technologies -->
-        <div id="skills-subtitle">TECHNOLOGIES</div>
-        <div id="skills-grid">
-          <!-- Screenshots for technologies -->
-          <!-- AWS -->
-          <img src="Assets/skill_7.svg" class="skill">
-          <!-- FullStackAgenticAI -->
-          <img src="Assets/skill_5.svg" class="skill">
+        <div class="skills-group">
+          <h3 id="technologies-title" class="skills-subtitle">Systems &amp; Cloud</h3>
+          <ul class="skills-grid skills-technologies" aria-labelledby="technologies-title">
+            <li class="skill"><span>AWS</span></li>
+            <li class="skill"><span>Terraform</span></li>
+            <li class="skill"><span>Docker</span></li>
+            <li class="skill"><span>Distributed Systems</span></li>
+            <li class="skill"><span>Load Balancing</span></li>
+            <li class="skill"><span>Networking</span></li>
+          </ul>
         </div>
 
-        <!-- Currently Learning -->
-        <div id="skills-subtitle">CURRENTLY LEARNING</div>
-        <div id="skills-grid">
-          <!-- Screenshots for currently learning -->
-          <!-- DistributedSystems -->
-          <img src="Assets/skill_6.svg" class="skill">
+        <div class="skills-group">
+          <h3 id="tools-title" class="skills-subtitle">Tools &amp; Testing</h3>
+          <ul class="skills-grid" aria-labelledby="tools-title">
+            <li class="skill"><span>Git</span></li>
+            <li class="skill"><span>Maven / Gradle</span></li>
+            <li class="skill"><span>Unit Testing</span></li>
+            <li class="skill"><span>Google Test</span></li>
+            <li class="skill"><span>TDD</span></li>
+            <li class="skill"><span>AI Tools</span></li>
+          </ul>
         </div>
-      </div>
+
+        <div class="skills-notes">
+          <p><strong>Platforms:</strong> Linux, macOS, Windows</p>
+          <p><strong>Spoken languages:</strong> English (native), Arabic (conversational)</p>
+        </div>
+      </section>
     </div>
-    <!-- SECTION: Skills -->
     
     <!-- SECTION: README -->
     <div id="section">
